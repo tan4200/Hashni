@@ -1,5 +1,7 @@
 const { Bot } = require('grammy');
 const fetch = require('node-fetch');
+const express = require('express');
+const app = express();
 
 const bot = new Bot('7206887492:AAGjOqBb4ngdVv4L6vji3HZn-Fi1lZXpfOE');
 
@@ -108,3 +110,12 @@ bot.command('danger_notifications_re', async (ctx) => {
     // API URL for space notifications
     const apiUrl = 'https://api.nasa.gov/DONKI/notifications?type=all&api_*/
 bot.start();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
