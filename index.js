@@ -2,10 +2,18 @@ const { Bot } = require('grammy');
 const fetch = require('node-fetch');
 const express = require('express');
 const app = express();
+require('dotenv').config(); // Load environment variables from .env file
 
-const bot = new Bot('7206887492:AAGjOqBb4ngdVv4L6vji3HZn-Fi1lZXpfOE');
+const bot_token = process.env.BOT_TOKEN;
+const api_token = process.env.API_TOKEN;
 
-const api_key = "Rdb0lIHP2xmBb4Axv6GERgih2iwZ8dffS8TQILc8"
+// Use bot_token and api_token in your code
+// For example:
+
+
+const bot = new Bot(bot_token);
+
+const api_key = api_token
 bot.command('start', (ctx) => {
   var txt = "🌍 <b>Bot made by https://t.me/SpeedCruze</b> 🚀\n\n<i> Try using commands to explore our cosmic bot!</i>";
   ctx.reply(txt, { parse_mode: "html" });
