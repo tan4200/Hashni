@@ -2,11 +2,10 @@ const { Bot } = require('grammy');
 const fetch = require('node-fetch');
 const express = require('express');
 const app = express();
-require('dotenv').config(); // Load environment variables from .env file
+// Load environment variables from .env file
 
-const bot_token = process.env.BOT_TOKEN;
-const api_token = process.env.API_TOKEN;
-
+const bot_token = "7206887492:AAGjOqBb4ngdVv4L6vji3HZn-Fi1lZXpfOE";
+const api_token = "Rdb0lIHP2xmBb4Axv6GERgih2iwZ8dffS8TQILc8";
 // Use bot_token and api_token in your code
 // For example:
 
