@@ -4,8 +4,8 @@ const express = require('express');
 const app = express();
 // Load environment variables from .env file
 
-const bot_token = "7206887492:AAGjOqBb4ngdVv4L6vji3HZn-Fi1lZXpfOE";
-const api_token = "Rdb0lIHP2xmBb4Axv6GERgih2iwZ8dffS8TQILc8";
+const bot_token = process.env.BOT_TOKEN;
+const api_token = process.env.API_KEY;
 // Use bot_token and api_token in your code
 // For example:
 
