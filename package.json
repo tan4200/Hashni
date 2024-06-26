@@ -6,7 +6,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "yarn install"
+    "build": "yarn install && yarn build"
   },
   "dependencies": {
     "grammy": "^1.25.0",
